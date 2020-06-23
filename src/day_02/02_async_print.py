@@ -22,12 +22,9 @@ async def start(x: int):
     coroutines = []
 
     for _ in range(x):
-        coroutines.append
-        (
-            asyncio.create_task(print_counter(x))
-        )
-
-    await asyncio.wait(coroutines)
+        coroutines.append(asyncio.create_task(print_counter(x)))
+        await asyncio.wait(coroutines)
 
 user_count = int (input("Количество функций --- "))
+
 asyncio.run(start(user_count))
